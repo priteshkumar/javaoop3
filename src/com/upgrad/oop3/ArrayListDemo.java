@@ -21,9 +21,6 @@ public class ArrayListDemo {
         ArrayList ar = new ArrayList();
         DemoOb ob;
 
-        int a[], b;
-        int[] c, d;
-
         for(int i=0;i < 3;i++) {
             ar.add(i+1);
             ob = new DemoOb(i+1,"Value " + (i+1));
@@ -60,6 +57,8 @@ public class ArrayListDemo {
 
         ArrayList<String> trackList = new ArrayList<String>(4);
         trackList.add("Sea of trees");
+
+        //use addAll method to add elements of other ArrayList in order
         trackList.addAll(tempList);
 
         for(String track:trackList){
