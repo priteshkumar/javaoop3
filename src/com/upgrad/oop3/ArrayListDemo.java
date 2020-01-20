@@ -46,19 +46,34 @@ public class ArrayListDemo {
         arlist.add(7);
         arlist.add(9);
         arlist.add(10);
-        //arlist.add(20);
-
-        int n = arlist.size();
-        for(int i=0;i < arlist.size()/2;i++){
-            int temp = arlist.get(i);
-            arlist.set(i,arlist.get(n-1-i));
-            arlist.set(n-i-1,temp);
-        }
 
         System.out.println("reversed list is:");
         for(Object o:arlist){
             System.out.println(o);
         }
 
+        System.out.println("===arraylist constructor variant====");
+        ArrayList<String> tempList = new ArrayList<String>();
+        tempList.add("red moon lagoon");
+        tempList.add("calistoga");
+        tempList.trimToSize();
+
+        ArrayList<String> trackList = new ArrayList<String>(4);
+        trackList.add("Sea of trees");
+        trackList.addAll(tempList);
+
+        for(String track:trackList){
+            System.out.println(track);
+        }
     }
+
+    public void reverseList(ArrayList<Integer> arlist){
+        int n = arlist.size();
+        for(int i=0;i < arlist.size()/2;i++){
+            int temp = arlist.get(i);
+            arlist.set(i,arlist.get(n-1-i));
+            arlist.set(n-i-1,temp);
+        }
+    }
+
 }
