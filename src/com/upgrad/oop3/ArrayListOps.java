@@ -74,5 +74,14 @@ public class ArrayListOps {
         //list contains element op
         System.out.println("does list has 33 value? " + list.contains(33));
         System.out.println("does list has 39 value? " + list.contains(39));
+
+        ArrayList<Float> random = new ArrayList<Float>();
+        random.add(2f);
+        random.add(4f);
+        random.add(5f);
+        random.add(10f);
+        random.add(99.9f);
+
+        System.out.println(random.contains(5.0));
     }
 }
