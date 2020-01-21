@@ -43,7 +43,6 @@ public class ArrayListDemo {
         arlist.add(7);
         arlist.add(9);
         arlist.add(10);
-
         System.out.println("reversed list is:");
         for(Object o:arlist){
             System.out.println(o);

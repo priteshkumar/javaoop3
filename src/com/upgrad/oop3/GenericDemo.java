@@ -14,6 +14,30 @@ class DemoListV1<T> extends ArrayList<T>{
     public boolean add(T t) {
         return super.add(t);
     }
+
+    public void addLast(T t){
+        super.add(this.size(),t);
+    }
+
+    public T removeLast(){
+        return super.remove(this.size() -1);
+    }
+
+    public T peekFirst(){
+        return super.get(0);
+    }
+
+    public T peekLast(){
+        return super.get(this.size() -1);
+    }
+
+    public void push(T t){
+        super.add(0,t);
+    }
+
+    public T pop(){
+        return super.remove(0);
+    }
 }
 
 
