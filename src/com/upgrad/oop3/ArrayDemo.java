@@ -19,10 +19,12 @@ public class ArrayDemo {
         obs[2] = new Integer(10);
         obs[3] = 20;
 
+
         System.out.println(obs[3].getClass());
         for(Object ob:obs){
             System.out.println(ob);
         }
+
 
         Arrays.sort(random);
         int flag = Arrays.binarySearch(random,23);

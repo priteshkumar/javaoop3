@@ -7,11 +7,12 @@ public class ArrayListMisc {
 
         //use Arrays.asList method for ArrayList initialisation
         ArrayList<String> artistList = new ArrayList<String>(Arrays.asList("caspian",
-                "gary clark jr","armin van burren"));
+                "gary clark jr","armin van burren","mogwai","mos def","linkin park"));
 
         //iterate artistList using iterator
         System.out.println("=====printing in forward======");
-        iterateList(artistList);
+      //  iterateList(artistList);
+        printAltn(artistList);
 
         System.out.println("=====printing in reverse=====");
         iterateReverse(artistList);
@@ -43,6 +44,20 @@ public class ArrayListMisc {
         ListIterator iter = list.listIterator(list.size());
         while(iter.hasPrevious()){
             System.out.println(iter.previous());
+        }
+    }
+
+    public static void printAltn(ArrayList<String> list){
+        ListIterator iter = list.listIterator();
+        int index;
+        while(iter.hasNext()){
+            index = iter.nextIndex();
+            if (index % 2 != 0){
+                System.out.println(iter.next());
+            }
+            else{
+                iter.next();
+            }
         }
     }
 
