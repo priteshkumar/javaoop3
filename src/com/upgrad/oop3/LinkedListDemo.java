@@ -19,6 +19,7 @@ class PizzaOrder{
 public class LinkedListDemo {
 
     public static void main(String[] args) {
+
         LinkedList<PizzaOrder> list = new LinkedList<PizzaOrder>();
         PizzaOrder p1 = new PizzaOrder(1, "cheese");
         list.add(p1);

@@ -5,6 +5,14 @@ import java.util.*;
 public class ArrayListMisc {
     public static void main(String[] args){
 
+        ArrayList<String> temp = new ArrayList<String>();
+        String[] ary = {"hello","world","dev"};
+        temp.addAll(Arrays.asList(ary));
+        for(String val:temp){
+            System.out.println(val);
+        }
+
+
         //use Arrays.asList method for ArrayList initialisation
         ArrayList<String> artistList = new ArrayList<String>(Arrays.asList("caspian",
                 "gary clark jr","armin van burren","mogwai","mos def","linkin park"));
